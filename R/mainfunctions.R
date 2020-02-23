@@ -123,7 +123,7 @@ corecomb = function(A_1,A_2,A_3,C,ttnsr,omega,alpha=TRUE,type="ordinal"){
 #' Fit the cumulative logistic model with alternating optimization method.
 #' @param ttnsr observed ordinal tensor data (k-level)
 #' @param C initial point for a core tensor and factor matrices
-#' @param A_1,A_2,A_3 initial points for factor marices
+#' @param A_1,A_2,A_3 initial points for factor matrices
 #' @param omega cut-off points if it is known,
 #'
 #' \code{omega = TRUE} if it is unknown
@@ -141,15 +141,15 @@ corecomb = function(A_1,A_2,A_3,C,ttnsr,omega,alpha=TRUE,type="ordinal"){
 #' @references Lee and Wang. “Tensor denoising and completion based on ordinal observations.” (2020).
 #' @examples
 #' # draw random ordinal tensor
-#' indices = c(30,30,30)
-#' rank = c(10,10,10)
+#' indices = c(10,10,10)
+#' rank = c(3,3,3)
 #' otensor <- array(sample(c(1,2,3),prod(indices),replace = TRUE),dim = indices)
 #'
 #' #Initial points for `fit_ordinal' function
 #' A_1 = pracma::randortho(indices[1])[,1:rank[1]]
 #' A_2 = pracma::randortho(indices[2])[,1:rank[2]]
 #' A_3 = pracma::randortho(indices[3])[,1:rank[3]]
-#' C = rTensor::rand_tensor(modes = rank)
+#' C = rTensor::rand_tensor(modes = rank)*10
 #'
 #' #Estimation for parameters
 #' parameter_est = fit_ordinal(otensor,C,A_1,A_2,A_3,omega = TRUE,alpha = 100)
@@ -257,7 +257,7 @@ fit_ordinal = function(ttnsr,C,A_1,A_2,A_3,omega=TRUE,alpha = TRUE){
 #' decompose a tensor with possibly missing values into Tucker decomposition
 #' @param ttnsr tensor data (k-level)
 #' @param C initial point for a core tensor and factor matrices
-#' @param A_1,A_2,A_3 initial points for factor marices
+#' @param A_1,A_2,A_3 initial points for factor matrices
 #' @param alpha max-norm constraints of a tensor
 #'
 #' \code{alpha = TRUE} if there is no constraint for max-norm of latent tensor parameters
@@ -269,8 +269,8 @@ fit_ordinal = function(ttnsr,C,A_1,A_2,A_3,omega=TRUE,alpha = TRUE){
 #' @usage fit_continuous(ttnsr,C,A_1,A_2,A_3,alpha = TRUE)
 #' @examples
 #' # draw random ordinal tensor
-#' indices = c(30,30,30)
-#' rank = c(10,10,10)
+#' indices = c(10,10,10)
+#' rank = c(3,3,3)
 #' otensor <- array(sample(c(1,2,3),prod(indices),replace = TRUE),dim = indices)
 #'
 #' #Initial points for `fit_continuous' function

@@ -60,7 +60,7 @@ logistic = function(x){
 #' \code{"mean"} specifies mean based label prediction
 #'
 #' \code{"median"} specifies median based label prediction
-#' @return predicted ordinal tensor from the given parameters and types of predction
+#' @return predicted ordinal tensor from the given parameters and types of prediction
 #' @examples
 #' indices <- c(10,20,30)
 #' arr <- array(runif(prod(indices)),dim = indices)

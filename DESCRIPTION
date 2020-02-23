@@ -1,6 +1,6 @@
 Package: tensorordinal
 Type: Package
-Title: Tensor denoising and completion based on ordinal observations
+Title: Tensor Noise Reduction and Completion Based on Ordinal Observations
 Version: 0.1.0
 Author: Chanwoo Lee <chanwoo.lee@wisc.edu>, Miaoyan Wang <miaoyan.wang@wisc.edu>
 Maintainer: Chanwoo Lee <chanwoo.lee@wisc.edu>
@@ -9,7 +9,7 @@ Imports:
     MASS,
     rTensor,
     methods
-Description: A set of tools for tensor denoising and completion from ordinal tensor data with possibly missing values. The algorithms can be found in Lee and Wang(2020)<arXiv:2002.06524>.
+Description: A set of tools for noise reduction and completion from ordinal tensor data with possibly missing values. The algorithms can be found in Lee and Wang(2020)<arXiv:2002.06524>.
 License: GPL(>=2)
 Encoding: UTF-8
 LazyData: true

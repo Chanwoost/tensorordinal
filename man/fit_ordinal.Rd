@@ -11,7 +11,7 @@ fit_ordinal(ttnsr,C,A_1,A_2,A_3,omega=TRUE,alpha = TRUE)
 
 \item{C}{initial point for a core tensor and factor matrices}
 
-\item{A_1, A_2, A_3}{initial points for factor marices}
+\item{A_1, A_2, A_3}{initial points for factor matrices}
 
 \item{omega}{cut-off points if it is known,
 
@@ -41,15 +41,15 @@ Fit the cumulative logistic model with alternating optimization method.
 }
 \examples{
 # draw random ordinal tensor
-indices = c(30,30,30)
-rank = c(10,10,10)
+indices = c(10,10,10)
+rank = c(3,3,3)
 otensor <- array(sample(c(1,2,3),prod(indices),replace = TRUE),dim = indices)
 
 #Initial points for `fit_ordinal' function
 A_1 = pracma::randortho(indices[1])[,1:rank[1]]
 A_2 = pracma::randortho(indices[2])[,1:rank[2]]
 A_3 = pracma::randortho(indices[3])[,1:rank[3]]
-C = rTensor::rand_tensor(modes = rank)
+C = rTensor::rand_tensor(modes = rank)*10
 
 #Estimation for parameters
 parameter_est = fit_ordinal(otensor,C,A_1,A_2,A_3,omega = TRUE,alpha = 100)

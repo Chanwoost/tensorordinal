@@ -11,7 +11,7 @@ fit_continuous(ttnsr,C,A_1,A_2,A_3,alpha = TRUE)
 
 \item{C}{initial point for a core tensor and factor matrices}
 
-\item{A_1, A_2, A_3}{initial points for factor marices}
+\item{A_1, A_2, A_3}{initial points for factor matrices}
 
 \item{alpha}{max-norm constraints of a tensor
 
@@ -33,8 +33,8 @@ decompose a tensor with possibly missing values into Tucker decomposition
 }
 \examples{
 # draw random ordinal tensor
-indices = c(30,30,30)
-rank = c(10,10,10)
+indices = c(10,10,10)
+rank = c(3,3,3)
 otensor <- array(sample(c(1,2,3),prod(indices),replace = TRUE),dim = indices)
 
 #Initial points for `fit_continuous' function

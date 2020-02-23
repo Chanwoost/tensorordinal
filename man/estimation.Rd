@@ -20,7 +20,7 @@ estimation(theta,omega,type = c("mode","mean","median"))
 \code{"median"} specifies median based label prediction}
 }
 \value{
-predicted ordinal tensor from the given parameters and types of predction
+predicted ordinal tensor from the given parameters and types of prediction
 }
 \description{
 Predict the ordinal-valued entries of a tensor with given parameters and a type of predictions
