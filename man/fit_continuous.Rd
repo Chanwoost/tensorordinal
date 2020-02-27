@@ -2,25 +2,25 @@
 % Please edit documentation in R/mainfunctions.R
 \name{fit_continuous}
 \alias{fit_continuous}
-\title{Continuous Tucker decomposition}
+\title{Fit a tensor using Tucker model}
 \usage{
 fit_continuous(ttnsr,C,A_1,A_2,A_3,alpha = TRUE)
 }
 \arguments{
-\item{ttnsr}{tensor data (k-level)}
+\item{ttnsr}{an observed tensor data}
 
-\item{C}{initial point for a core tensor and factor matrices}
+\item{C}{an initial point for a core tensor}
 
 \item{A_1, A_2, A_3}{initial points for factor matrices}
 
-\item{alpha}{max-norm constraints of a tensor
+\item{alpha}{a max-norm constraint of a tensor
 
-\code{alpha = TRUE} if there is no constraint for max-norm of latent tensor parameters}
+\code{alpha = TRUE} if there is no constraint for max-norm of a latent tensor parameter}
 }
 \value{
 a list containing the following:
 
-\code{C} - estimated core tensor
+\code{C} - an estimated core tensor
 
 \code{A_1, A_2, A_3} - estimated factor matrices
 
@@ -29,7 +29,7 @@ a list containing the following:
 \code{cost} - evaluations of cost functions at each iterations
 }
 \description{
-decompose a tensor with possibly missing values into Tucker decomposition
+Fitting e a tensor with possibly missing values using Tucker model
 }
 \examples{
 # draw random ordinal tensor

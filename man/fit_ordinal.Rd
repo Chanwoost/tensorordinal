@@ -2,14 +2,14 @@
 % Please edit documentation in R/mainfunctions.R
 \name{fit_ordinal}
 \alias{fit_ordinal}
-\title{Fitting the cumulative logistic model}
+\title{Fit the cumulative logistic model}
 \usage{
 fit_ordinal(ttnsr,C,A_1,A_2,A_3,omega=TRUE,alpha = TRUE)
 }
 \arguments{
-\item{ttnsr}{observed ordinal tensor data (k-level)}
+\item{ttnsr}{an observed tensor data}
 
-\item{C}{initial point for a core tensor and factor matrices}
+\item{C}{an initial point for a core tensor}
 
 \item{A_1, A_2, A_3}{initial points for factor matrices}
 
@@ -17,18 +17,18 @@ fit_ordinal(ttnsr,C,A_1,A_2,A_3,omega=TRUE,alpha = TRUE)
 
 \code{omega = TRUE} if it is unknown}
 
-\item{alpha}{signal level
+\item{alpha}{a signal level
 
 \code{alpha = TRUE} if there is no constraint for max-norm of latent tensor parameters}
 }
 \value{
 a list containing the following:
 
-\code{C} - estimated core tensor
+\code{C} - an estimated core tensor
 
 \code{A_1, A_2, A_3} - estimated factor matrices
 
-\code{theta} - estimated latent parameter tensor
+\code{theta} - an estimated latent parameter tensor
 
 \code{iteration} - the number of iterations
 
@@ -37,7 +37,7 @@ a list containing the following:
 \code{omega} - estimated cut-off points vector (k-level)
 }
 \description{
-Fit the cumulative logistic model with alternating optimization method.
+Fitting the cumulative logistic model with alternating optimization method.
 }
 \examples{
 # draw random ordinal tensor

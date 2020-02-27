@@ -9,13 +9,13 @@ realization(theta,omega)
 \arguments{
 \item{theta}{continuous parameter tensor (latent parameter)}
 
-\item{omega}{the cut-off points (k-levels)}
+\item{omega}{the cut-off points}
 }
 \value{
-ordinal tensor randomly sampled from the cumulative logistic model
+an ordinal tensor randomly sampled from the cumulative logistic model
 }
 \description{
-Random sampling from the cumulative logistic model given theta and omega
+Random sampling from the cumulative logistic model with parameter tensor and cut-off points
 }
 \examples{
 indices <- c(10,20,30)
