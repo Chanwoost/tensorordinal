@@ -118,22 +118,22 @@ corecomb = function(A_1,A_2,A_3,C,ttnsr,omega,alpha=TRUE,type="ordinal"){
 }
 
 
-#' Fitting the cumulative logistic model
+#' Fit the cumulative logistic model
 #'
-#' Fit the cumulative logistic model with alternating optimization method.
-#' @param ttnsr observed ordinal tensor data (k-level)
-#' @param C initial point for a core tensor and factor matrices
+#' Fitting the cumulative logistic model with alternating optimization method.
+#' @param ttnsr an observed tensor data
+#' @param C an initial point for a core tensor
 #' @param A_1,A_2,A_3 initial points for factor matrices
 #' @param omega cut-off points if it is known,
 #'
 #' \code{omega = TRUE} if it is unknown
-#' @param alpha signal level
+#' @param alpha a signal level
 #'
 #' \code{alpha = TRUE} if there is no constraint for max-norm of latent tensor parameters
 #' @return a list containing the following:
-#' @return \code{C} - estimated core tensor
+#' @return \code{C} - an estimated core tensor
 #' @return \code{A_1, A_2, A_3} - estimated factor matrices
-#' @return \code{theta} - estimated latent parameter tensor
+#' @return \code{theta} - an estimated latent parameter tensor
 #' @return \code{iteration} - the number of iterations
 #' @return \code{cost} - evaluations of cost functions at each iterations
 #' @return \code{omega} - estimated cut-off points vector (k-level)
@@ -252,17 +252,17 @@ fit_ordinal = function(ttnsr,C,A_1,A_2,A_3,omega=TRUE,alpha = TRUE){
   return(result)
 }
 
-#' Continuous Tucker decomposition
+#' Fit a tensor using Tucker model
 #'
-#' decompose a tensor with possibly missing values into Tucker decomposition
-#' @param ttnsr tensor data (k-level)
-#' @param C initial point for a core tensor and factor matrices
+#' Fitting e a tensor with possibly missing values using Tucker model
+#' @param ttnsr an observed tensor data
+#' @param C an initial point for a core tensor
 #' @param A_1,A_2,A_3 initial points for factor matrices
-#' @param alpha max-norm constraints of a tensor
+#' @param alpha a max-norm constraint of a tensor
 #'
-#' \code{alpha = TRUE} if there is no constraint for max-norm of latent tensor parameters
+#' \code{alpha = TRUE} if there is no constraint for max-norm of a latent tensor parameter
 #' @return a list containing the following:
-#' @return \code{C} - estimated core tensor
+#' @return \code{C} - an estimated core tensor
 #' @return \code{A_1, A_2, A_3} - estimated factor matrices
 #' @return \code{iteration} - the number of iterations
 #' @return \code{cost} - evaluations of cost functions at each iterations
