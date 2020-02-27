@@ -26,7 +26,7 @@ logistic = function(x){
 #' @examples
 #' indices <- c(10,20,30)
 #' arr <- array(runif(prod(indices)),dim = indices)
-#' b <- runif(3)
+#' b <- qnorm((1:3)/4)
 #' r_sample <- realization(arr,b);r_sample
 #' @export
 #' @import rTensor
@@ -59,7 +59,7 @@ realization = function(theta,omega){
 #' @examples
 #' indices <- c(10,20,30)
 #' arr <- array(runif(prod(indices)),dim = indices)
-#' b <- runif(3)
+#' b <- qnorm((1:3)/4)
 #' r_predict <- estimation(arr,b,type = "mode");r_predict
 #' @export
 estimation = function(theta,omega,type = c("mode","mean","median")){
