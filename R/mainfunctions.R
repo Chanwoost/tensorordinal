@@ -158,7 +158,6 @@ corecomb = function(A_1,A_2,A_3,C,ttnsr,omega,alpha=TRUE,type="ordinal"){
 #' @export
 #' @import rTensor
 #' @import MASS
-#' @importFrom pracma "randortho"
 #' @importFrom methods "new"
 #' @importFrom stats "constrOptim" "optim"
 
