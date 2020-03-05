@@ -31,6 +31,7 @@ Fitting e a tensor with possibly missing values using Tucker model
 }
 \examples{
 # Latent parameters
+library(rTensor)
 alpha = 10
 A_1 = matrix(runif(15*2,min=-1,max=1),nrow = 15)
 A_2 = matrix(runif(15*2,min=-1,max=1),nrow = 15)

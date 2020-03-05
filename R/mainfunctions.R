@@ -140,6 +140,7 @@ corecomb = function(A_1,A_2,A_3,C,ttnsr,omega,alpha=TRUE,type="ordinal"){
 #' @references Lee and Wang (2020) <arXiv:2002.06524>.
 #' @examples
 #' # Latent parameters
+#' library(rTensor)
 #' alpha = 10
 #' A_1 = matrix(runif(15*2,min=-1,max=1),nrow = 15)
 #' A_2 = matrix(runif(15*2,min=-1,max=1),nrow = 15)
@@ -286,6 +287,7 @@ fit_ordinal = function(ttnsr,r,omega=TRUE,alpha = TRUE){
 #' @usage fit_continuous(ttnsr,r,alpha = TRUE)
 #' @examples
 #' # Latent parameters
+#' library(rTensor)
 #' alpha = 10
 #' A_1 = matrix(runif(15*2,min=-1,max=1),nrow = 15)
 #' A_2 = matrix(runif(15*2,min=-1,max=1),nrow = 15)
@@ -304,6 +306,7 @@ fit_ordinal = function(ttnsr,r,omega=TRUE,alpha = TRUE){
 #' @export
 #' @import rTensor
 #' @import MASS
+#' @importFrom pracma "randortho"
 #' @importFrom methods "new"
 #' @importFrom stats "constrOptim" "optim"
 fit_continuous=function(ttnsr,r,alpha = TRUE){
