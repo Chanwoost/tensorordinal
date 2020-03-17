@@ -260,7 +260,7 @@ fit_ordinal = function(ttnsr,r,omega=TRUE,alpha = TRUE){
   # identifiability adjustment
   madj <- mean(theta)
   theta <- theta -madj
-  invisible(capture.output(final <- hosvd(as.tensor(theta),r+1)))
+  final <- hosvd(as.tensor(theta),r+1)
 
   result$C <- final$Z; result$A <- final$U
   result$theta= theta
