@@ -10,7 +10,7 @@ logistic = function(x){
 #' @usage theta_to_p(theta,omega)
 #' @param theta a continuous-valued tensor (latent parameters)
 #' @param omega the cut-off points
-#' @return a probability matrix where the number of columns is possible outcomes and each row vector is corresponding probabilities at an entry of the tensor
+#' @return a probability matrix in which the number of columns is possible outcomes and each row vector is corresponding probabilities at an entry of the tensor
 #' @examples
 #' indices <- c(10,20,30)
 #' arr <- array(runif(prod(indices),-2,2),dim = indices)

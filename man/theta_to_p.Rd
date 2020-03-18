@@ -12,7 +12,7 @@ theta_to_p(theta,omega)
 \item{omega}{the cut-off points}
 }
 \value{
-a probability matrix where the number of columns is possible outcomes and each row vector is corresponding probabilities at an entry of the tensor
+a probability matrix in which the number of columns is possible outcomes and each row vector is corresponding probabilities at an entry of the tensor
 }
 \description{
 Compute the probability matrix given latent parameters from the cumulative model
