@@ -10,6 +10,7 @@ Imports:
     rTensor,
     methods
 Description: Efficient algorithm for tensor noise reduction and completion of ordinal tensor data based on the cumulative link model. The algorithm employs the alternating optimization approach. The detailed algorithm description can be found in Lee and Wang, Proceedings of the 37th International Conference on Machine Learning, PMLR 119:5778-5788, 2020.
+URL: http://proceedings.mlr.press/v119/lee20i.html
 License: GPL(>=2)
 Encoding: UTF-8
 LazyData: true
