@@ -1,2 +1,1 @@
-## December, 2020
-	(1) revised documentations
+December, 2020  (1) revised documentations
